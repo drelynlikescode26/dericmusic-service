@@ -1,3 +1,16 @@
+// ─── Clean Anchor Scrolling (no hash in URL) ─────────────────
+document.querySelectorAll('.nav__link--anchor').forEach((link) => {
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth' });
+    // Keep URL clean — no hash appended
+    history.replaceState(null, '', window.location.pathname);
+  });
+});
+
 // ─── Mobile Nav Toggle ──────────────────────────────────
 const hamburger = document.getElementById('nav-hamburger');
 const navMenu = document.querySelector('.nav__links');

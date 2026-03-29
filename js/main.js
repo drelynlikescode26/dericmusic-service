@@ -1,3 +1,35 @@
+// ─── Mobile Nav Toggle ──────────────────────────────────
+const hamburger = document.getElementById('nav-hamburger');
+const navMenu = document.querySelector('.nav__links');
+
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('is-open');
+    hamburger.classList.toggle('is-active', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  navMenu.querySelectorAll('.nav__link').forEach((link) => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('is-open');
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+// ─── Nav Scroll Effect ───────────────────────────────────
+const nav = document.getElementById('nav');
+if (nav) {
+  window.addEventListener(
+    'scroll',
+    () => nav.classList.toggle('scrolled', window.scrollY > 60),
+    { passive: true }
+  );
+}
+
 // ─── Scroll Reveal ───────────────────────────────────────
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -20,16 +52,6 @@ document.querySelectorAll('.reveal').forEach((el) => {
   }
   revealObserver.observe(el);
 });
-
-// ─── Nav Scroll Effect ───────────────────────────────────
-const nav = document.getElementById('nav');
-if (nav) {
-  window.addEventListener(
-    'scroll',
-    () => nav.classList.toggle('scrolled', window.scrollY > 60),
-    { passive: true }
-  );
-}
 
 // ─── Count-Up Animation ──────────────────────────────────
 function countUp(el) {
@@ -66,11 +88,3 @@ if (credSection) {
   );
   statObserver.observe(credSection);
 }
-
-// ─── Close Mobile Nav on Link Click ─────────────────────
-document.querySelectorAll('.nav__link').forEach((link) => {
-  link.addEventListener('click', () => {
-    const toggle = document.getElementById('nav-toggle');
-    if (toggle) toggle.checked = false;
-  });
-});

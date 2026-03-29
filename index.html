@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
@@ -24,10 +25,9 @@
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">DERIC</a>
-      <input type="checkbox" id="nav-toggle" class="nav__toggle-input" aria-hidden="true">
-      <label for="nav-toggle" class="nav__hamburger" aria-label="Toggle menu">
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
-      </label>
+      </button>
       <ul class="nav__links">
         <li><a href="#services" class="nav__link">Services</a></li>
         <li><a href="#value" class="nav__link">Why Deric</a></li>
@@ -126,13 +126,21 @@
         </div>
       </div>
       <p class="credibility__note reveal"><em>Built on connection — not just polish.</em></p>
-      <div class="credibility__listen reveal">
-        <span class="credibility__listen-label">Listen on</span>
-        <div class="credibility__listen-links">
-          <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" class="listen-link">Spotify</a>
-          <span class="listen-dot" aria-hidden="true">&middot;</span>
-          <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" class="listen-link">Apple Music</a>
-        </div>
+      <div class="stream-badges reveal">
+        <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" class="stream-badge">
+          <i class="fa-brands fa-spotify stream-badge__icon"></i>
+          <div class="stream-badge__text">
+            <span class="stream-badge__sub">Listen on</span>
+            <span class="stream-badge__name">Spotify</span>
+          </div>
+        </a>
+        <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" class="stream-badge">
+          <i class="fa-brands fa-apple stream-badge__icon"></i>
+          <div class="stream-badge__text">
+            <span class="stream-badge__sub">Listen on</span>
+            <span class="stream-badge__name">Apple Music</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -156,16 +164,33 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <span class="footer__logo">DERIC</span>
+    <div class="container">
       <nav class="footer__socials" aria-label="Social links">
-        <a href="https://instagram.com/envyderic" target="_blank" rel="noopener" class="footer__social-link">Instagram</a>
-        <a href="https://youtube.com/@envyderic" target="_blank" rel="noopener" class="footer__social-link">YouTube</a>
-        <a href="https://soundcloud.com/envyderic" target="_blank" rel="noopener" class="footer__social-link">SoundCloud</a>
-        <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" class="footer__social-link">Spotify</a>
-        <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" class="footer__social-link">Apple Music</a>
+        <a href="https://instagram.com/envyderic" target="_blank" rel="noopener" class="footer__social-link">
+          <i class="fa-brands fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://youtube.com/@envyderic" target="_blank" rel="noopener" class="footer__social-link">
+          <i class="fa-brands fa-youtube"></i>
+          <span>YouTube</span>
+        </a>
+        <a href="https://soundcloud.com/envyderic" target="_blank" rel="noopener" class="footer__social-link">
+          <i class="fa-brands fa-soundcloud"></i>
+          <span>SoundCloud</span>
+        </a>
+        <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" class="footer__social-link">
+          <i class="fa-brands fa-spotify"></i>
+          <span>Spotify</span>
+        </a>
+        <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" class="footer__social-link">
+          <i class="fa-brands fa-apple"></i>
+          <span>Apple Music</span>
+        </a>
       </nav>
-      <span class="footer__copy">&copy; 2026 Deric Music. All rights reserved.</span>
+      <div class="footer__bottom">
+        <span class="footer__logo">DERIC</span>
+        <span class="footer__copy">&copy; 2026 Deric Music. All rights reserved.</span>
+      </div>
     </div>
   </footer>
 

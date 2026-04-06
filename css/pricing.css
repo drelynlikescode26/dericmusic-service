@@ -248,16 +248,146 @@
 }
 
 /* ─── Mobile ─────────────────────────────────────────── */
+/* ─── Feature Add-On Card ─────────────────────────────── */
+.pricing__addon {
+  margin-top: 1.25rem;
+  padding: 2.25rem;
+  border: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  background: var(--color-surface);
+  transition: border-color 250ms ease;
+}
+
+.pricing__addon:hover {
+  border-color: rgba(184, 0, 0, 0.4);
+}
+
+.pricing__addon-left {
+  flex: 1;
+  min-width: 260px;
+}
+
+.pricing__addon-name {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.pricing__addon-desc {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+  max-width: 44ch;
+  margin-bottom: 1.25rem;
+}
+
+.pricing__addon-features {
+  margin-bottom: 0;
+}
+
+.pricing__addon-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  min-width: 180px;
+}
+
+.pricing__addon-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+
+.pricing__addon-right .price-card__cta {
+  width: 100%;
+  min-width: 180px;
+}
+
+/* ─── Custom Inquiry — Restructured ──────────────────── */
+.pricing__custom {
+  margin-top: var(--space-lg);
+  padding: 2.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.pricing__custom-header {
+  margin-bottom: 1.75rem;
+}
+
+.pricing__custom-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--color-border);
+}
+
+.pricing__custom-option {
+  background: var(--color-surface-2);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pricing__custom-option-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.15;
+}
+
+.pricing__custom-option-desc {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+  flex: 1;
+}
+
+.pricing__custom-option .price-card__cta {
+  align-self: flex-start;
+  padding-inline: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+/* ─── Mobile ─────────────────────────────────────────── */
 @media (max-width: 767px) {
   .pricing__grid {
     grid-template-columns: 1fr;
   }
 
   .pricing__custom {
+    padding: 1.75rem;
+  }
+
+  .pricing__addon {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     padding: 1.75rem;
+  }
+
+  .pricing__addon-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .pricing__addon-right .price-card__cta {
+    width: 100%;
+  }
+
+  .pricing__custom-options {
+    grid-template-columns: 1fr;
   }
 }
 

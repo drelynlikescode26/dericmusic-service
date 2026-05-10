@@ -6,7 +6,6 @@ document.querySelectorAll('.nav__link--anchor').forEach((link) => {
     if (!target) return;
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth' });
-    // Keep URL clean — no hash appended
     history.replaceState(null, '', window.location.pathname);
   });
 });
@@ -33,7 +32,7 @@ if (hamburger && navMenu) {
   });
 }
 
-// ─── Nav Scroll Effect ───────────────────────────────────────
+// ─── Nav Scroll Effect ─────────────────────────────────────
 const nav = document.getElementById('nav');
 if (nav) {
   window.addEventListener(
@@ -43,7 +42,7 @@ if (nav) {
   );
 }
 
-// ─── Scroll Reveal ───────────────────────────────────────────
+// ─── Scroll Reveal ─────────────────────────────────────────
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -73,6 +72,27 @@ document.querySelectorAll('.reveal').forEach((el) => {
 
   let activeAudio = null;
   let activeTrack = null;
+  let volume = 0.8;
+
+  const volSlider = document.getElementById('volume-slider');
+  const volIcon = document.getElementById('vol-icon');
+
+  function updateVolIcon(v) {
+    if (!volIcon) return;
+    volIcon.className = v === 0
+      ? 'fa-solid fa-volume-xmark'
+      : v < 0.5
+        ? 'fa-solid fa-volume-low'
+        : 'fa-solid fa-volume-high';
+  }
+
+  if (volSlider) {
+    volSlider.addEventListener('input', () => {
+      volume = parseFloat(volSlider.value);
+      if (activeAudio) activeAudio.volume = volume;
+      updateVolIcon(volume);
+    });
+  }
 
   function formatTime(s) {
     const m = Math.floor(s / 60);
@@ -114,6 +134,7 @@ document.querySelectorAll('.reveal').forEach((el) => {
       }
 
       activeAudio = new Audio(src);
+      activeAudio.volume = volume;
       activeTrack = track;
       activeAudio.play();
       track.classList.add('is-playing');

@@ -11,7 +11,7 @@ document.querySelectorAll('.nav__link--anchor').forEach((link) => {
   });
 });
 
-// ─── Mobile Nav Toggle ──────────────────────────────────
+// ─── Mobile Nav Toggle ──────────────────────────────
 const hamburger = document.getElementById('nav-hamburger');
 const navMenu = document.querySelector('.nav__links');
 
@@ -33,7 +33,7 @@ if (hamburger && navMenu) {
   });
 }
 
-// ─── Nav Scroll Effect ───────────────────────────────────
+// ─── Nav Scroll Effect ───────────────────────────────────────
 const nav = document.getElementById('nav');
 if (nav) {
   window.addEventListener(
@@ -43,7 +43,7 @@ if (nav) {
   );
 }
 
-// ─── Scroll Reveal ───────────────────────────────────────
+// ─── Scroll Reveal ───────────────────────────────────────────
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -66,7 +66,77 @@ document.querySelectorAll('.reveal').forEach((el) => {
   revealObserver.observe(el);
 });
 
-// ─── Count-Up Animation ──────────────────────────────────
+// ─── Audio Player ────────────────────────────────────────────
+(function () {
+  const tracks = document.querySelectorAll('.track');
+  if (!tracks.length) return;
+
+  let activeAudio = null;
+  let activeTrack = null;
+
+  function formatTime(s) {
+    const m = Math.floor(s / 60);
+    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  }
+
+  function resetTrack(track) {
+    track.classList.remove('is-playing');
+    track.querySelector('.track__progress-fill').style.width = '0%';
+    track.querySelector('.track__time').textContent = '0:00';
+    const icon = track.querySelector('.track__play i');
+    icon.className = 'fa-solid fa-play';
+  }
+
+  tracks.forEach((track) => {
+    const btn = track.querySelector('.track__play');
+    const fill = track.querySelector('.track__progress-fill');
+    const timeEl = track.querySelector('.track__time');
+    const bar = track.querySelector('.track__progress-bar');
+    const src = track.dataset.src;
+
+    btn.addEventListener('click', () => {
+      if (activeTrack === track) {
+        if (activeAudio.paused) {
+          activeAudio.play();
+          track.classList.add('is-playing');
+          btn.querySelector('i').className = 'fa-solid fa-pause';
+        } else {
+          activeAudio.pause();
+          track.classList.remove('is-playing');
+          btn.querySelector('i').className = 'fa-solid fa-play';
+        }
+        return;
+      }
+
+      if (activeAudio) {
+        activeAudio.pause();
+        resetTrack(activeTrack);
+      }
+
+      activeAudio = new Audio(src);
+      activeTrack = track;
+      activeAudio.play();
+      track.classList.add('is-playing');
+      btn.querySelector('i').className = 'fa-solid fa-pause';
+
+      activeAudio.addEventListener('timeupdate', () => {
+        if (!activeAudio.duration) return;
+        fill.style.width = (activeAudio.currentTime / activeAudio.duration * 100) + '%';
+        timeEl.textContent = formatTime(activeAudio.currentTime);
+      });
+
+      activeAudio.addEventListener('ended', () => resetTrack(track));
+    });
+
+    bar.addEventListener('click', (e) => {
+      if (activeTrack !== track || !activeAudio || !activeAudio.duration) return;
+      const rect = bar.getBoundingClientRect();
+      activeAudio.currentTime = ((e.clientX - rect.left) / rect.width) * activeAudio.duration;
+    });
+  });
+})();
+
+// ─── Count-Up Animation ────────────────────────────────────────────
 function countUp(el) {
   const target = parseInt(el.dataset.target, 10);
   const suffix = el.dataset.suffix || '';

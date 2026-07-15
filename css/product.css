@@ -1,0 +1,393 @@
+/* ═══════════════════════════════════════════════════════════
+   PRODUCT LAYER — conversion & clarity sections
+   Hero messaging · Trust bar · Process · FAQ · Product polish
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Hero Messaging ─────────────────────────────────── */
+.hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: 0.5rem;
+}
+
+.hero__offer {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-white);
+  max-width: 40ch;
+  margin: 0.75rem auto 0;
+  opacity: 0.9;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.hero__trust {
+  margin-top: 1.75rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.hero__trust strong {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+/* ─── Trust Bar ──────────────────────────────────────── */
+.trustbar {
+  border-block: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding-block: 1.4rem;
+}
+
+.trustbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 2.5rem;
+}
+
+.trustbar__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.trustbar__num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.trustbar__label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.trustbar__divider {
+  width: 1px;
+  height: 26px;
+  background: var(--color-border);
+}
+
+.trustbar__platforms {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trustbar__on {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.trustbar__platforms a {
+  color: var(--color-muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.trustbar__platforms a:hover {
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ─── Process / How It Works ─────────────────────────── */
+.process {
+  background: var(--color-black);
+}
+
+.process .section__intro {
+  max-width: 580px;
+  margin-bottom: var(--space-lg);
+}
+
+.process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  counter-reset: step;
+}
+
+.process__step {
+  position: relative;
+  padding: 2.25rem 1.5rem 2rem;
+  background: var(--color-surface);
+  border-top: 2px solid var(--color-border);
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.process__step:hover {
+  border-color: var(--color-crimson);
+  transform: translateY(-4px);
+}
+
+.process__num {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 300;
+  color: var(--color-crimson);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.process__step-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+
+.process__step-body {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+/* ─── Service Card Price Line ────────────────────────── */
+.card__price {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: var(--space-md);
+}
+
+/* ─── Pricing Product Terms ──────────────────────────── */
+.price-card__terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-card__term {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.32rem 0.6rem;
+  border-radius: 999px;
+}
+
+.price-card__term i {
+  color: var(--color-crimson);
+  font-size: 0.62rem;
+}
+
+/* ─── Reassurance line under pricing ─────────────────── */
+.pricing__assurance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.pricing__assurance i {
+  color: var(--color-crimson);
+}
+
+/* ─── Verified / Find Me ─────────────────────────────── */
+.verified {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.verified__label {
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+
+.verified__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.verified__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid var(--color-border);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.verified__chip i {
+  font-size: 1rem;
+  color: var(--color-muted);
+  transition: color var(--transition-base);
+}
+
+.verified__chip:hover {
+  border-color: var(--color-crimson);
+  transform: translateY(-2px);
+}
+
+.verified__chip:hover i {
+  color: var(--color-crimson);
+}
+
+/* ─── FAQ ────────────────────────────────────────────── */
+.faq {
+  background: var(--color-surface);
+}
+
+.faq .section__intro {
+  margin-bottom: var(--space-lg);
+}
+
+.faq__list {
+  border-top: 1px solid var(--color-border);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq__q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.3;
+  transition: color var(--transition-fast);
+}
+
+.faq__q:hover {
+  color: var(--color-crimson-lit);
+}
+
+.faq__q i {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--color-crimson);
+  transition: transform var(--transition-base);
+}
+
+.faq__item.is-open .faq__q i {
+  transform: rotate(45deg);
+}
+
+.faq__a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base) ease;
+}
+
+.faq__a p {
+  padding: 0 0 1.5rem;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--color-muted);
+  max-width: 60ch;
+}
+
+/* ─── Final CTA reassurance ──────────────────────────── */
+.cta__reassure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.cta__reassure i {
+  color: var(--color-crimson);
+}
+
+/* ─── Mobile ─────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .process__grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .trustbar__divider {
+    display: none;
+  }
+
+  .trustbar__inner {
+    gap: 1rem 1.75rem;
+  }
+
+  .hero__ctas {
+    width: 100%;
+  }
+
+  .hero__ctas .btn {
+    flex: 1;
+    text-align: center;
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

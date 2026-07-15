@@ -192,3 +192,33 @@ if (credSection) {
   );
   statObserver.observe(credSection);
 }
+
+// ─── FAQ Accordion ─────────────────────────────────────────
+document.querySelectorAll('.faq__item').forEach((item) => {
+  const btn = item.querySelector('.faq__q');
+  const answer = item.querySelector('.faq__a');
+  if (!btn || !answer) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('is-open');
+
+    // Close any other open item
+    document.querySelectorAll('.faq__item.is-open').forEach((other) => {
+      if (other !== item) {
+        other.classList.remove('is-open');
+        other.querySelector('.faq__q').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq__a').style.maxHeight = null;
+      }
+    });
+
+    if (isOpen) {
+      item.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+      answer.style.maxHeight = null;
+    } else {
+      item.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});

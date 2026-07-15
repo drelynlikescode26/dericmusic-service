@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deric Music — Songwriting &amp; Vocal Services</title>
-  <meta name="description" content="Deric Music — Emotion-driven songwriting, vocal recording, and full song creation. R&B and melodic rap. 20M+ streams.">
-  <meta property="og:title" content="Deric Music — Premium Music Services">
-  <meta property="og:description" content="Songwriting, ghostwriting, and vocal services from an artist with 20M+ streams.">
+  <title>Deric Music — Songwriting &amp; Vocal Services for Artists</title>
+  <meta name="description" content="Professional R&B and melodic rap songwriting, hooks, and vocals — written and recorded for artists who want release-ready records. 20M+ streams. Secure checkout.">
+  <meta property="og:title" content="Deric Music — Premium Songwriting &amp; Vocal Services">
+  <meta property="og:description" content="Hooks, full songs, and complete records written and recorded by an artist with 20M+ streams. Simple process, secure checkout.">
   <meta property="og:url" content="https://service.dericmusic.com">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0A0A0A">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/pricing.css">
+  <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
 
@@ -31,11 +33,11 @@
       </button>
       <ul class="nav__links">
         <li><a href="#services" class="nav__link nav__link--anchor">Services</a></li>
+        <li><a href="#process" class="nav__link nav__link--anchor">How It Works</a></li>
         <li><a href="#samples" class="nav__link nav__link--anchor">Listen</a></li>
         <li><a href="#pricing" class="nav__link nav__link--anchor">Pricing</a></li>
-        <li><a href="#products" class="nav__link nav__link--anchor">Presets</a></li>
-        <li><a href="#credibility" class="nav__link nav__link--anchor">Credits</a></li>
-        <li><a href="#cta" class="nav__link nav__link--cta nav__link--anchor">Get Started</a></li>
+        <li><a href="#faq" class="nav__link nav__link--anchor">FAQ</a></li>
+        <li><a href="#pricing" class="nav__link nav__link--cta nav__link--anchor">Get Started</a></li>
       </ul>
     </div>
   </nav>
@@ -46,12 +48,37 @@
       <img src="assets/images/hero-bg.jpg" alt="" class="hero__bg-img">
     </div>
     <div class="hero__content">
+      <span class="hero__eyebrow">Songwriting · Vocals · Full Records</span>
       <h1 class="hero__name">Deric</h1>
-      <p class="hero__tagline">Songwriter. Vocal Artist.</p>
-      <a href="#pricing" class="btn btn--ghost hero__cta nav__link--anchor">View Pricing</a>
+      <p class="hero__offer">Studio-quality R&amp;B and melodic rap — written and recorded for artists who want a record they can actually release.</p>
+      <div class="hero__ctas">
+        <a href="#pricing" class="btn btn--primary nav__link--anchor">View Services &amp; Pricing</a>
+        <a href="#samples" class="btn btn--ghost nav__link--anchor">Hear My Work</a>
+      </div>
+      <p class="hero__trust"><strong>20M+ streams</strong> · <strong>200+ records</strong> created · Trusted by independent artists</p>
     </div>
     <div class="hero__scroll" aria-hidden="true">
       <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trustbar" aria-label="Credentials">
+    <div class="container trustbar__inner">
+      <div class="trustbar__item">
+        <span class="trustbar__num">20M+</span>
+        <span class="trustbar__label">Streams</span>
+      </div>
+      <div class="trustbar__item">
+        <span class="trustbar__num">200+</span>
+        <span class="trustbar__label">Records Created</span>
+      </div>
+      <div class="trustbar__divider" aria-hidden="true"></div>
+      <div class="trustbar__platforms">
+        <span class="trustbar__on">As heard on</span>
+        <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" aria-label="Apple Music"><i class="fa-brands fa-apple"></i></a>
+      </div>
     </div>
   </section>
 
@@ -61,7 +88,7 @@
       <div class="section__intro reveal">
         <span class="section__label">What I Do</span>
         <h2 class="section__heading">Songwriting &amp;<br>Vocal Services</h2>
-        <p class="section__body">Deric works with artists and producers to create emotion-driven R&amp;B and melodic rap records that feel authentic, sound professional, and connect.</p>
+        <p class="section__body">Pick what you need — a hook, a full song, or a complete record. Every service is written and recorded to feel authentic, sound professional, and connect with listeners.</p>
       </div>
       <div class="services__grid">
         <div class="card reveal">
@@ -69,6 +96,7 @@
           <h3 class="card__title">Hook Writing</h3>
           <p class="card__tagline">The part that sticks.</p>
           <p class="card__body">Catchy, repeatable hooks designed to elevate a record and make it memorable.</p>
+          <p class="card__price">From $100</p>
           <a href="#pricing" class="card__link nav__link--anchor">See Pricing &rarr;</a>
         </div>
         <div class="card reveal">
@@ -76,6 +104,7 @@
           <h3 class="card__title">Songwriting</h3>
           <p class="card__tagline">Your story, your name.</p>
           <p class="card__body">Full rap or R&amp;B songs written from scratch with strong concepts and structure. Ghostwriting available.</p>
+          <p class="card__price">From $200</p>
           <a href="#pricing" class="card__link nav__link--anchor">See Pricing &rarr;</a>
         </div>
         <div class="card reveal">
@@ -83,14 +112,49 @@
           <h3 class="card__title">Vocal Recording</h3>
           <p class="card__tagline">Radio-ready vocals.</p>
           <p class="card__body">Clean, professional vocals recorded on client beats — features and demos delivered with emotion and clarity.</p>
+          <p class="card__price">From $150</p>
           <a href="#pricing" class="card__link nav__link--anchor">See Pricing &rarr;</a>
         </div>
         <div class="card reveal">
           <span class="card__numeral">IV</span>
-          <h3 class="card__title">Full Song Creation</h3>
+          <h3 class="card__title">Full Record Creation</h3>
           <p class="card__tagline">Concept to completion.</p>
           <p class="card__body">End-to-end creation from idea to finished record — writing, melody, and vocals all included.</p>
+          <p class="card__price">From $275</p>
           <a href="#pricing" class="card__link nav__link--anchor">See Pricing &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="process" class="section process">
+    <div class="container">
+      <div class="section__intro reveal">
+        <span class="section__label">How It Works</span>
+        <h2 class="section__heading">From Idea to<br>Finished Record.</h2>
+        <p class="section__body">A simple, professional process — so you always know exactly what's happening and what you're getting.</p>
+      </div>
+      <div class="process__grid">
+        <div class="process__step reveal">
+          <span class="process__num">01</span>
+          <h3 class="process__step-title">Choose Your Service</h3>
+          <p class="process__step-body">Pick a package below — a hook, a full song, a feature, or a complete record. Need something custom? Just reach out.</p>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__num">02</span>
+          <h3 class="process__step-title">Share Your Vision</h3>
+          <p class="process__step-body">Send your beat, a reference track, or a concept. Tell me the vibe and story — the more direction, the better it lands.</p>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__num">03</span>
+          <h3 class="process__step-title">I Create It</h3>
+          <p class="process__step-body">Your record is written and recorded with real emotion and industry-level quality — built around your voice and vision.</p>
+        </div>
+        <div class="process__step reveal">
+          <span class="process__num">04</span>
+          <h3 class="process__step-title">Receive &amp; Refine</h3>
+          <p class="process__step-body">You get your files, plus revisions to make sure the final record feels exactly the way you imagined it.</p>
         </div>
       </div>
     </div>
@@ -102,7 +166,7 @@
       <div class="section__intro reveal">
         <span class="section__label">The Work</span>
         <h2 class="section__heading">Hear Before<br>You Buy.</h2>
-        <p class="section__body">Five records. Real R&amp;B. This is what you're investing in.</p>
+        <p class="section__body">Five records. Real R&amp;B. This is the quality and emotion you're investing in.</p>
       </div>
       <div class="tracklist reveal">
 
@@ -189,7 +253,7 @@
       </div>
       <div class="player__volume">
         <i class="fa-solid fa-volume-low" id="vol-icon"></i>
-        <input type="range" class="volume__slider" id="volume-slider" min="0" max="1" step="0.05" value="0.8">
+        <input type="range" class="volume__slider" id="volume-slider" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
       </div>
       <p class="samples__note reveal">More on <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" class="samples__spotify-link">Spotify</a></p>
     </div>
@@ -201,7 +265,7 @@
       <div class="pricing__header reveal">
         <span class="section__label">Pricing</span>
         <h2 class="section__heading">Invest in Your Sound.</h2>
-        <p class="section__body">Transparent pricing. No hidden fees. Limited slots available each week to maintain quality.</p>
+        <p class="section__body">Transparent, flat-rate pricing. No hidden fees. Limited slots each week to keep every record high quality.</p>
       </div>
 
       <div class="pricing__grid">
@@ -215,6 +279,10 @@
             <span class="price-card__original">$150</span>
             <div class="price-card__amount"><sup>$</sup>100</div>
             <span class="price-card__savings">Save $50</span>
+          </div>
+          <div class="price-card__terms">
+            <span class="price-card__term"><i class="fa-solid fa-clock"></i> Quick turnaround</span>
+            <span class="price-card__term"><i class="fa-solid fa-rotate"></i> Revisions included</span>
           </div>
           <div class="price-card__divider"></div>
           <ul class="price-card__features">
@@ -237,6 +305,10 @@
             <div class="price-card__amount"><sup>$</sup>200</div>
             <span class="price-card__savings">Save $100</span>
           </div>
+          <div class="price-card__terms">
+            <span class="price-card__term"><i class="fa-solid fa-clock"></i> Quick turnaround</span>
+            <span class="price-card__term"><i class="fa-solid fa-rotate"></i> Revisions included</span>
+          </div>
           <div class="price-card__divider"></div>
           <ul class="price-card__features">
             <li>Full song structure (verses + hook)</li>
@@ -256,6 +328,10 @@
             <span class="price-card__original">$400</span>
             <div class="price-card__amount"><sup>$</sup>275</div>
             <span class="price-card__savings">Save $125</span>
+          </div>
+          <div class="price-card__terms">
+            <span class="price-card__term"><i class="fa-solid fa-clock"></i> Quick turnaround</span>
+            <span class="price-card__term"><i class="fa-solid fa-rotate"></i> Revisions included</span>
           </div>
           <div class="price-card__divider"></div>
           <ul class="price-card__features">
@@ -294,6 +370,10 @@
 
       <p class="pricing__scarcity reveal">
         <i class="fa-solid fa-bolt"></i> Limited slots available each week — pricing will increase as demand grows.
+      </p>
+
+      <p class="pricing__assurance reveal">
+        <i class="fa-solid fa-lock"></i> Secure checkout powered by Stripe — after payment, I'll reach out to kick off your project.
       </p>
 
       <!-- Custom Inquiry -->
@@ -352,21 +432,110 @@
         </div>
       </div>
       <p class="credibility__note reveal"><em>Built on connection — not just polish.</em></p>
-      <div class="stream-badges reveal">
-        <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" class="stream-badge">
-          <i class="fa-brands fa-spotify stream-badge__icon"></i>
-          <div class="stream-badge__text">
-            <span class="stream-badge__sub">Listen on</span>
-            <span class="stream-badge__name">Spotify</span>
+
+      <div class="verified reveal">
+        <p class="verified__label">Real artist. Verified across every platform.</p>
+        <div class="verified__links">
+          <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" class="verified__chip">
+            <i class="fa-brands fa-spotify"></i> Spotify
+          </a>
+          <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" class="verified__chip">
+            <i class="fa-brands fa-apple"></i> Apple Music
+          </a>
+          <a href="https://instagram.com/envyderic" target="_blank" rel="noopener" class="verified__chip">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <a href="https://youtube.com/@envyderic" target="_blank" rel="noopener" class="verified__chip">
+            <i class="fa-brands fa-youtube"></i> YouTube
+          </a>
+          <a href="https://soundcloud.com/envyderic" target="_blank" rel="noopener" class="verified__chip">
+            <i class="fa-brands fa-soundcloud"></i> SoundCloud
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section faq">
+    <div class="container container--narrow">
+      <div class="section__intro reveal">
+        <span class="section__label">FAQ</span>
+        <h2 class="section__heading">Questions,<br>Answered.</h2>
+      </div>
+      <div class="faq__list reveal">
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>What exactly do I get?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Depending on your package: a professionally written hook, a full song, a feature, or a complete record — delivered with a clean vocal reference so you can hear exactly how it's meant to sound and drop it straight into your project.</p>
           </div>
-        </a>
-        <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" class="stream-badge">
-          <i class="fa-brands fa-apple stream-badge__icon"></i>
-          <div class="stream-badge__text">
-            <span class="stream-badge__sub">Listen on</span>
-            <span class="stream-badge__name">Apple Music</span>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>How does the process work?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Choose a package and check out securely. Then you send your beat, reference, or concept, and I write and record it. You receive your files and we refine until it feels right. Full breakdown is in the <a href="#process" class="samples__spotify-link nav__link--anchor">How It Works</a> section above.</p>
           </div>
-        </a>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>How long does it take?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Turnaround depends on the package and how many slots are open that week. You'll get a clear timeline before we start, and I keep you updated the whole way through.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>How many revisions are included?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Every project includes revisions to make sure the final record feels exactly like you. The goal is a song you're genuinely proud to release — not a rushed demo.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>Do I own the rights to the song?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Ownership, credits, and any songwriting splits are agreed upfront in writing before delivery — so everything is clear, fair, and protects both of us.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>What do you need from me to start?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Your beat or a reference track, plus a little about the vibe, story, or artists you're inspired by. The more direction you give, the more the final record sounds like <em>you</em>.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>Do you write in my style?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>My specialty is R&amp;B and melodic rap, and every record is tailored to your voice and vision. Not sure if it's a fit? <a href="mailto:contact@dericmusic.com" class="samples__spotify-link">Reach out first</a> and we'll talk it through.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">
+            <span>Is payment secure?</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__a">
+            <p>Yes. All payments are processed securely through Stripe, the same platform trusted by millions of businesses worldwide. Your card details never touch this site.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -382,8 +551,9 @@
     <div class="container container--narrow cta__inner">
       <span class="section__label reveal">Let's Work</span>
       <h2 class="cta__heading reveal">Ready to make<br>something?</h2>
-      <p class="cta__body reveal">Send your idea, beat, or concept to get started.<br>Let's build something worth hearing.</p>
-      <a href="mailto:contact@dericmusic.com" class="btn btn--primary reveal">Get in Touch</a>
+      <p class="cta__body reveal">Pick a package to get started, or send your idea and beat.<br>Let's build something worth hearing.</p>
+      <a href="#pricing" class="btn btn--primary reveal nav__link--anchor">View Services &amp; Pricing</a>
+      <p class="cta__reassure reveal"><i class="fa-solid fa-lock"></i> Secure checkout · Revisions included</p>
     </div>
   </section>
 

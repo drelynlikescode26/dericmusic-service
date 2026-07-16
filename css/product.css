@@ -243,6 +243,10 @@
   margin-bottom: 1.25rem;
 }
 
+.verified__label--pro {
+  margin-top: 2.25rem;
+}
+
 .verified__links {
   display: flex;
   flex-wrap: wrap;

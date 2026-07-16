@@ -343,6 +343,11 @@
   max-width: 60ch;
 }
 
+.faq__a strong {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
 /* ─── Final CTA reassurance ──────────────────────────── */
 .cta__reassure {
   display: flex;

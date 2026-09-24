@@ -21,13 +21,14 @@
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/pricing.css">
   <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/home-revamp.css">
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">DERIC</a>
+      <a href="/" class="nav__logo" aria-label="Deric Music home"><img src="assets/images/deric-music-logo.jpg" alt="Deric Music"></a>
       <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -48,81 +49,46 @@
       <img src="assets/images/hero-bg.jpg" alt="" class="hero__bg-img">
     </div>
     <div class="hero__content">
-      <span class="hero__eyebrow">Songwriting · Vocals · Full Records</span>
-      <h1 class="hero__name">Deric</h1>
-      <p class="hero__offer">Studio-quality R&amp;B and melodic rap, written and recorded for artists who want a record they can actually release.</p>
+      <h1 class="hero__name">Make the song<br>feel like yours<span class="hero__period">.</span></h1>
+      <p class="hero__offer">Need help writing it, or want Deric on the record? Choose what best fits your style.</p>
       <div class="hero__ctas">
-        <a href="#pricing" class="btn btn--primary nav__link--anchor">View Services &amp; Pricing</a>
-        <a href="#samples" class="btn btn--ghost nav__link--anchor">Hear My Work</a>
+        <a href="#services" class="hero__primary nav__link--anchor">See Your Options <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="#samples" class="hero__listen nav__link--anchor"><span class="hero__play"><i class="fa-solid fa-play" aria-hidden="true"></i></span> Hear My Work</a>
       </div>
-      <p class="hero__trust"><strong>20M+ streams</strong> · <strong>200+ records</strong> created · Trusted by independent artists</p>
+      <div class="hero__stats" aria-label="Credentials">
+        <span><strong>20M+</strong> Streams</span>
+        <span><strong>200+</strong> Records</span>
+      </div>
     </div>
     <div class="hero__scroll" aria-hidden="true">
       <span class="hero__scroll-line"></span>
     </div>
   </section>
 
-  <!-- Trust Bar -->
-  <section class="trustbar" aria-label="Credentials">
-    <div class="container trustbar__inner">
-      <div class="trustbar__item">
-        <span class="trustbar__num">20M+</span>
-        <span class="trustbar__label">Streams</span>
-      </div>
-      <div class="trustbar__item">
-        <span class="trustbar__num">200+</span>
-        <span class="trustbar__label">Records Created</span>
-      </div>
-      <div class="trustbar__divider" aria-hidden="true"></div>
-      <div class="trustbar__platforms">
-        <span class="trustbar__on">As heard on</span>
-        <a href="https://open.spotify.com/artist/08nIFJLOyYWc5eWJCa4S8X" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
-        <a href="https://music.apple.com/us/artist/deric/1529542054" target="_blank" rel="noopener" aria-label="Apple Music"><i class="fa-brands fa-apple"></i></a>
-      </div>
-    </div>
-  </section>
-
   <!-- Services -->
-  <section id="services" class="section services">
+  <section id="services" class="section services services--index">
     <div class="container">
-      <div class="section__intro reveal">
-        <span class="section__label">What I Do</span>
-        <h2 class="section__heading">Writing Help or<br>Recorded Vocals.</h2>
-        <p class="section__body">Need help writing the song? Or want Deric on the record? Pick the lane that fits your project.</p>
-      </div>
-      <div class="services__grid">
-        <div class="card reveal">
-          <span class="card__numeral">I</span>
-          <h3 class="card__title">Custom Hook</h3>
-          <p class="card__tagline">The part that sticks.</p>
-          <p class="card__body">Catchy, repeatable hooks designed to elevate a record and make it memorable.</p>
-          <p class="card__price">From $100</p>
-          <a href="#writing-services" class="card__link nav__link--anchor">See Writing Options &rarr;</a>
-        </div>
-        <div class="card reveal">
-          <span class="card__numeral">II</span>
-          <h3 class="card__title">Full Songwriting</h3>
-          <p class="card__tagline">Your story, your name.</p>
-          <p class="card__body">Full rap or R&amp;B songs written from scratch with strong concepts and structure. Ghostwriting available.</p>
-          <p class="card__price">From $200</p>
-          <a href="#writing-services" class="card__link nav__link--anchor">See Writing Options &rarr;</a>
-        </div>
-        <div class="card reveal">
-          <span class="card__numeral">III</span>
-          <h3 class="card__title">Feature / Custom Verse</h3>
-          <p class="card__tagline">Need a verse on your track?</p>
-          <p class="card__body">Send the track over. I’ll write and record a custom verse or hook that fits the song.</p>
-          <p class="card__price">From $150</p>
-          <a href="#recorded-vocals" class="card__link nav__link--anchor">See Vocal Options &rarr;</a>
-        </div>
-        <div class="card reveal">
-          <span class="card__numeral">IV</span>
-          <h3 class="card__title">Full Record</h3>
-          <p class="card__tagline">Concept to completion.</p>
-          <p class="card__body">From idea to finished record. Writing, melody, and vocals are all included.</p>
-          <p class="card__price">From $275</p>
-          <a href="#recorded-vocals" class="card__link nav__link--anchor">See Vocal Options &rarr;</a>
-        </div>
+      <div class="service-index reveal" aria-label="Services">
+        <a href="#writing-services" class="service-index__item service-index__item--hook nav__link--anchor">
+          <span class="service-index__number">01</span>
+          <span class="service-index__title">Custom Hook</span>
+          <span class="service-index__arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="#writing-services" class="service-index__item service-index__item--songwriting nav__link--anchor">
+          <span class="service-index__number">02</span>
+          <span class="service-index__title">Full Songwriting</span>
+          <span class="service-index__arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="#recorded-vocals" class="service-index__item service-index__item--record nav__link--anchor">
+          <span class="service-index__number">03</span>
+          <span class="service-index__title">Full Record</span>
+          <span class="service-index__arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+        <a href="#recorded-vocals" class="service-index__item service-index__item--feature nav__link--anchor">
+          <span class="service-index__number">04</span>
+          <span class="service-index__title">Feature or Custom Verse</span>
+          <span class="service-index__arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
       </div>
     </div>
   </section>

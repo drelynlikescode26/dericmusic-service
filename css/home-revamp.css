@@ -177,6 +177,72 @@
   background: var(--color-black);
 }
 
+/* The homepage is intentionally short. The deeper details now live on their own pages. */
+.home .process,
+.home .samples,
+.home .pricing,
+.home .products,
+.home .value,
+.home .credibility,
+.home .faq,
+.home .photo-break,
+.home .cta {
+  display: none;
+}
+
+.page-shell {
+  padding-top: 5.4rem;
+}
+
+.page-intro {
+  padding: clamp(4.5rem, 9vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+  background: linear-gradient(120deg, #111 0%, #0a0a0a 55%, #310606 100%);
+}
+
+.page-intro__eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--color-crimson-lit);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.page-intro h1 {
+  max-width: 9ch;
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 8vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.85;
+}
+
+.page-intro p {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+
+.nav__link[aria-current="page"] {
+  color: var(--color-white);
+}
+
+@media (max-width: 767px) {
+  .page-shell {
+    padding-top: 4.5rem;
+  }
+
+  .page-intro {
+    padding: 4.5rem 0 3rem;
+  }
+}
+
 .service-index {
   border-top: 1px solid rgba(245, 245, 245, 0.28);
 }

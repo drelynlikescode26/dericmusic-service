@@ -193,6 +193,67 @@ if (credSection) {
   statObserver.observe(credSection);
 }
 
+// ─── Full-Screen Service Console ──────────────────────────
+const serviceConsole = document.querySelector('.service-console');
+if (serviceConsole) {
+  const services = {
+    hook: {
+      name: 'Custom Hook',
+      description: 'A hook or longer chorus written for your track.',
+      price: '$100',
+      note: 'Reference vocals help you hear the flow. They are not for release.',
+      url: 'https://book.stripe.com/eVqeVd3zA4Hp0kraP6fnO00',
+    },
+    songwriting: {
+      name: 'Full Songwriting',
+      description: 'A complete song written around your idea, story, or sound.',
+      price: '$200',
+      note: 'Ghostwriting is available if you want to release the song under your name.',
+      url: 'https://buy.stripe.com/28E3cveee1vdgjp5uMfnO01',
+    },
+    record: {
+      name: 'Full Record',
+      description: 'A complete song written and recorded by Deric on your beat.',
+      price: '$275',
+      note: 'For a finished Deric performance on your beat.',
+      url: 'https://buy.stripe.com/9B66oH7PQddVc396yQfnO02',
+    },
+    feature: {
+      name: 'Feature / Custom Verse',
+      description: 'A custom verse or hook written and recorded by Deric for your track.',
+      price: '$150',
+      note: 'For artists who want Deric on the record without booking a full song.',
+      url: 'https://buy.stripe.com/fZu4gz2vw0r92sz4qIfnO03',
+    },
+  };
+
+  const name = document.getElementById('console-service-name');
+  const description = document.getElementById('console-service-description');
+  const price = document.getElementById('console-service-price');
+  const note = document.getElementById('console-service-note');
+  const bookLink = document.getElementById('console-book-link');
+
+  document.querySelectorAll('.service-console__tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const service = services[tab.dataset.service];
+      if (!service) return;
+
+      document.querySelectorAll('.service-console__tab').forEach((other) => {
+        const isSelected = other === tab;
+        other.classList.toggle('is-active', isSelected);
+        other.setAttribute('aria-selected', String(isSelected));
+      });
+
+      serviceConsole.dataset.service = tab.dataset.service;
+      name.textContent = service.name;
+      description.textContent = service.description;
+      price.textContent = service.price;
+      note.textContent = service.note;
+      bookLink.href = service.url;
+    });
+  });
+}
+
 // ─── FAQ Accordion ─────────────────────────────────────────
 document.querySelectorAll('.faq__item').forEach((item) => {
   const btn = item.querySelector('.faq__q');

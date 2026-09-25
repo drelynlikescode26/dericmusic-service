@@ -30,7 +30,7 @@
     <div class="nav__inner">
       <a href="/" class="nav__logo" aria-label="Deric Music home"><img src="assets/images/deric-music-logo-transparent.png" alt="Deric Music"></a>
       <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <i class="fa-solid fa-ellipsis-vertical" aria-hidden="true"></i>
       </button>
       <ul class="nav__links">
         <li><a href="services.html" class="nav__link">Services</a></li>
@@ -41,6 +41,39 @@
       </ul>
     </div>
   </nav>
+
+  <main class="service-console" aria-label="Deric Music services">
+    <div class="service-console__photo" aria-hidden="true"><img src="assets/images/hero-bg.jpg" alt=""></div>
+    <aside class="service-console__rail" aria-label="Credentials">
+      <div class="service-console__stats">
+        <div><strong>20M+</strong><span>Streams</span></div>
+        <div><strong>200+</strong><span>Records</span></div>
+      </div>
+      <a href="work.html" class="service-console__listen"><span><i class="fa-solid fa-play" aria-hidden="true"></i></span>Hear My Work</a>
+    </aside>
+    <section class="service-console__main">
+      <header class="service-console__header">
+        <h1>Songwriting, Ghostwriting,<br>and Vocals<span>.</span></h1>
+        <p>Need help writing it, or want Deric on the record?</p>
+        <div class="service-console__tabs" role="tablist" aria-label="Choose a service">
+          <button type="button" class="service-console__tab" role="tab" aria-selected="false" data-service="hook">Custom Hook</button>
+          <button type="button" class="service-console__tab" role="tab" aria-selected="false" data-service="songwriting">Full Songwriting</button>
+          <button type="button" class="service-console__tab is-active" role="tab" aria-selected="true" data-service="record">Full Record</button>
+          <button type="button" class="service-console__tab" role="tab" aria-selected="false" data-service="feature">Feature / Custom Verse</button>
+        </div>
+      </header>
+      <article class="service-console__stage" aria-live="polite">
+        <span class="service-console__eyebrow">Service</span>
+        <h2 id="console-service-name">Full Record</h2>
+        <p id="console-service-description">A complete song written and recorded by Deric on your beat.</p>
+        <div class="service-console__purchase">
+          <span id="console-service-price">$275</span>
+          <a id="console-book-link" href="https://buy.stripe.com/9B66oH7PQddVc396yQfnO02" target="_blank" rel="noopener">Book This <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <p class="service-console__note" id="console-service-note">For a finished Deric performance on your beat.</p>
+      </article>
+    </section>
+  </main>
 
   <!-- Hero -->
   <section id="hero" class="hero">

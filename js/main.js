@@ -15,6 +15,13 @@ const hamburger = document.getElementById('nav-hamburger');
 const navMenu = document.querySelector('.nav__links');
 
 if (hamburger && navMenu) {
+  const closeNavMenu = () => {
+    navMenu.classList.remove('is-open');
+    hamburger.classList.remove('is-active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+
   hamburger.addEventListener('click', () => {
     const isOpen = navMenu.classList.toggle('is-open');
     hamburger.classList.toggle('is-active', isOpen);
@@ -23,12 +30,17 @@ if (hamburger && navMenu) {
   });
 
   navMenu.querySelectorAll('.nav__link').forEach((link) => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('is-open');
-      hamburger.classList.remove('is-active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeNavMenu);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (navMenu.classList.contains('is-open') && !navMenu.closest('.nav').contains(event.target)) {
+      closeNavMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navMenu.classList.contains('is-open')) closeNavMenu();
   });
 }
 

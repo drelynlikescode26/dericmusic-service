@@ -1061,3 +1061,22 @@
     transform: none;
   }
 }
+
+/* Inner pages sit below the fixed navigation on every screen size. */
+main.page-shell {
+  padding-top: clamp(7.5rem, 10vw, 9rem);
+}
+
+/* Keep the FAQ readable and practical instead of looking like a display headline. */
+.faq__q {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.35vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 767px) {
+  main.page-shell {
+    padding-top: 6.25rem;
+  }
+}

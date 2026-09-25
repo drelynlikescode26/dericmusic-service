@@ -60,6 +60,11 @@
   text-wrap: balance;
 }
 
+.hero__name > span {
+  display: block;
+  white-space: nowrap;
+}
+
 .hero__period {
   color: var(--color-crimson-lit);
 }
@@ -369,9 +374,11 @@
   }
 
   .hero__name {
-    max-width: 8.4ch;
-    font-size: clamp(4rem, 18vw, 5.75rem);
-    line-height: 0.86;
+    max-width: none;
+    font-size: clamp(3.1rem, 13vw, 4.2rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    text-wrap: nowrap;
   }
 
   .hero__offer {

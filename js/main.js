@@ -19,6 +19,7 @@ if (hamburger && navMenu) {
     navMenu.classList.remove('is-open');
     hamburger.classList.remove('is-active');
     hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
     document.body.style.overflow = '';
   };
 
@@ -26,6 +27,7 @@ if (hamburger && navMenu) {
     const isOpen = navMenu.classList.toggle('is-open');
     hamburger.classList.toggle('is-active', isOpen);
     hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 

@@ -1272,4 +1272,20 @@ main.page-shell {
     padding: 0.7rem 0.8rem;
     font-size: 0.62rem;
   }
+
+  /* Never make real page content look unloaded while visitors are deciding what to do. */
+  body:not(.home) .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .services-page .page-intro {
+    padding-top: 3rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .services-page .pricing {
+    padding-top: 1.5rem;
+  }
 }

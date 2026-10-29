@@ -35,6 +35,11 @@
 .inquiry-person small{display:block;font-size:.7rem;color:var(--muted);font-weight:400;margin-top:4px}
 .photo-preview-note a{text-decoration:underline;text-underline-offset:3px}
 .package-summary{font-size:.8rem;color:#ead5ca;margin:0 0 24px;padding:12px 14px;border-left:2px solid #c96a59;background:#211b18}
+.service-card .service-scope{font-size:.75rem;color:var(--muted);line-height:1.5;margin-top:-8px;margin-bottom:20px}
+.inquiry-reference{font-size:.78rem;line-height:1.6;margin-block:18px;overflow-wrap:anywhere}
+.inquiry-reference code{font-size:.75rem;user-select:all}
+#inquiry-follow-up{margin-bottom:22px}
+#inquiry-follow-up a{text-decoration:underline;text-underline-offset:3px}
 .service-example{display:flex;align-items:flex-start;gap:18px;padding:20px;margin:0 0 28px;border:1px solid #4c463e;background:#191817}
 .service-example>img{width:72px;height:72px;object-fit:cover;flex:none}
 .service-example .eyebrow{display:block;font-size:.58rem;margin-bottom:8px}.service-example strong{font-size:.86rem;font-weight:500}.service-example p{font-size:.78rem;margin-top:7px}.service-example .text-link{font-size:.75rem;margin-top:5px}

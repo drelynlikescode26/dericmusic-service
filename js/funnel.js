@@ -190,6 +190,16 @@ document.addEventListener('DOMContentLoaded', () => {
       completed = true;
       form.hidden = true;
       const success = document.getElementById('inquiry-success');
+      const reference = document.getElementById('inquiry-reference');
+      if (reference) {
+        reference.textContent = inquiryId;
+        reference.parentElement.hidden = false;
+      }
+      const followUp = document.getElementById('inquiry-follow-up-link');
+      if (followUp) {
+        const subject = 'Follow-up on ' + inquiryId + ' | Deric Music';
+        followUp.href = 'mailto:contact@dericmusic.com?subject=' + encodeURIComponent(subject);
+      }
       success.hidden = false;
       success.focus();
       form.reset();

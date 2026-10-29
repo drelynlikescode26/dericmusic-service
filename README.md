@@ -10,6 +10,12 @@ The funnel is homepage → music/client proof → service inquiry → agree proj
 
 Each inquiry contains a unique reference, selected service category and exact package when chosen, project and contact fields, optional budget/deadline/music/social fields, submitting page, optional referral domain, and campaign tags. All four package CTAs preselect the right service and package; visitors may change it or ask for help choosing. Changing category clears an incompatible package. The email subject names the selected package. The form preserves entered details on failure and suppresses repeated submissions. It does not subscribe people to MailerLite.
 
+After confirmed acceptance, visitors see the same inquiry reference included in the submission email. The follow-up email link includes that reference in its subject, without contact or project text. Nothing is displayed as sent until the form endpoint confirms acceptance. No automatic client email or guaranteed response window is claimed.
+
+## Booking scope
+
+The service cards, FAQ, and inquiry flow explain that the work, file formats, revision allowance, price, delivery date, and applicable release terms are agreed before payment. The vague “Revisions included” label was removed. Known service descriptions and prices remain in place; file formats, separate-track delivery, revision limits, and a reply-time promise are not invented. The owner's SoundBetter profile currently lists up to two free revisions, but this has not been assumed to apply to all direct bookings. Standard delivery timing is separate from first-reply timing.
+
 ## Campaign attribution and conversions
 
 Use campaign-tagged ad URLs, for example:
@@ -28,4 +34,4 @@ The homepage uses the owner's approved EPK portrait, with the photo above the he
 
 Custom play/pause and seek controls enhance native audio; native controls remain if JavaScript is unavailable. One track plays at a time, with a direct audio link on playback errors.
 
-17 automated DOM/behavior checks cover navigation, local routes, form validation and budget choices, submission outcomes/duplicates, audio controls, and consent-gated conversions. Live Formspree acceptance and inbox receipt were verified. No payment was made. Rendered desktop/iPhone QA remains pending because local browser access was disabled. Real analytics-provider verification also remains pending.
+25 automated DOM/behavior checks cover navigation, local routes, form validation and budget choices, submission outcomes/duplicates, inquiry references, all four exact package handoffs, audio controls, and consent-gated conversions. Live Formspree acceptance and inbox receipt were verified. No payment was made. Rendered desktop/iPhone QA remains pending because local browser access was disabled. Real analytics-provider verification also remains pending.

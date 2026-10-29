@@ -76,11 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (available && !saved && !protectedBrowser) openPreferences();
   start();
   window.addEventListener('deric:inquiry-sent', event => {
-    const {service, inquiryId} = event.detail || {};
+    const {service, packageKey, inquiryId} = event.detail || {};
     if (!available || !consent || !['writing','vocals','custom','unsure'].includes(service) || !/^lead-[a-zA-Z0-9-]{8,80}$/.test(inquiryId || '') || counted.has(inquiryId)) return;
     counted.add(inquiryId);
     start();
-    if (ga4Id) window.gtag('event', 'generate_lead', {service_category:service,lead_source:'website_inquiry'});
-    if (pixelId) window.fbq('track', 'Lead', {content_category:service}, {eventID:inquiryId});
+    const packageServices = {'custom-hook':'writing','full-songwriting':'writing','full-record':'vocals','feature':'vocals'};
+    const matchedPackage = Object.hasOwn(packageServices, packageKey || '') && packageServices[packageKey] === service ? packageKey : '';
+    const googleDetails = {service_category:service,lead_source:'website_inquiry'};
+    const metaDetails = {content_category:service};
+    if (matchedPackage) { googleDetails.service_package = matchedPackage; metaDetails.content_name = matchedPackage; }
+    if (ga4Id) window.gtag('event', 'generate_lead', googleDetails);
+    if (pixelId) window.fbq('track', 'Lead', metaDetails, {eventID:inquiryId});
   });
 });

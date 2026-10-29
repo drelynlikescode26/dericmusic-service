@@ -80,6 +80,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const preferred = query.get('need');
   if (serviceKeys.includes(preferred)) form.querySelector('input[value="' + preferred + '"]').checked = true;
 
+  const packages = {
+    'custom-hook': { name: 'Custom Hook', service: 'writing' },
+    'full-songwriting': { name: 'Full Songwriting', service: 'writing' },
+    'full-record': { name: 'Full Record', service: 'vocals' },
+    'feature': { name: 'Feature / Custom Verse', service: 'vocals' }
+  };
+  const packageField = document.getElementById('package-field');
+  const packageChoice = document.getElementById('package-choice');
+  const packageSummary = document.getElementById('package-summary');
+  function selectedPackage() {
+    const key = packageChoice?.value || '';
+    const choice = Object.hasOwn(packages, key) ? packages[key] : null;
+    const service = form.querySelector('[name="service"]:checked')?.value;
+    return choice?.service === service ? { key, ...choice } : null;
+  }
+  function updatePackageSummary() {
+    if (!packageSummary) return;
+    const choice = selectedPackage();
+    packageSummary.hidden = !choice;
+    packageSummary.textContent = choice ? 'You’re asking about: ' + choice.name : '';
+  }
+  function updatePackages(requested = '') {
+    if (!packageField || !packageChoice) return;
+    const service = form.querySelector('[name="service"]:checked')?.value;
+    const current = requested || packageChoice.value;
+    const choices = Object.entries(packages).filter(([, value]) => value.service === service);
+    packageField.hidden = choices.length === 0;
+    packageChoice.disabled = choices.length === 0;
+    packageChoice.replaceChildren(new Option('Help Me Choose', ''));
+    choices.forEach(([key, value]) => packageChoice.add(new Option(value.name, key)));
+    packageChoice.value = choices.some(([key]) => key === current) ? current : '';
+    updatePackageSummary();
+  }
+  const requestedPackage = query.get('package') || '';
+  if (Object.hasOwn(packages, requestedPackage)) {
+    form.querySelector('[name="service"][value="' + packages[requestedPackage].service + '"]').checked = true;
+  }
+  updatePackages(requestedPackage);
+  form.querySelectorAll('[name="service"]').forEach(input => input.addEventListener('change', () => updatePackages()));
+  packageChoice?.addEventListener('change', updatePackageSummary);
+
   function showStep(step) {
     const first = step === 1;
     project.hidden = !first;
@@ -126,6 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
     data.set('_subject', 'New service inquiry | Deric Music');
     data.set('inquiry_type', 'service_project');
     data.set('inquiry_id', inquiryId);
+    const packageSelection = selectedPackage();
+    data.delete('package');
+    if (packageSelection) {
+      data.set('package_key', packageSelection.key);
+      data.set('package_name', packageSelection.name);
+      data.set('_subject', packageSelection.name + ' inquiry | Deric Music');
+    }
     if (!data.get('utm_source')) data.set('utm_source', 'direct_or_unattributed');
     try {
       const referringHost = document.referrer ? new URL(document.referrer).hostname : '';
@@ -146,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
       success.focus();
       form.reset();
       // Local hook for future consent-aware conversion tracking. Contains no personal details.
-      window.dispatchEvent(new CustomEvent('deric:inquiry-sent', { detail: { service: data.get('service'), inquiryId } }));
+      window.dispatchEvent(new CustomEvent('deric:inquiry-sent', { detail: { service: data.get('service'), packageKey: packageSelection?.key || '', inquiryId } }));
     } catch (_) {
       status.textContent = 'We couldn’t confirm delivery. Your details are still here. You can try again or email contact@dericmusic.com.';
       status.focus();

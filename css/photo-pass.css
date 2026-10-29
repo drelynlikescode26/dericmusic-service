@@ -1,0 +1,68 @@
+/* Real EPK photography, with independent mobile crops and no text over faces. */
+.service-photo{display:block;overflow:hidden;background:#24221f}
+.service-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.intro-media>.service-photo{position:absolute;inset:0;width:100%;height:100%}
+.hero-portrait img{object-position:50% 30%}
+.intro-media{background:#d9d0bf;min-height:520px}
+.intro-media figcaption{padding:12px 18px;font-size:.67rem;background:#101010e8}
+.way{border-top:0;padding-top:0}
+.way-photo-link{display:block;overflow:hidden;margin-bottom:22px}
+.way-photo-link .service-photo{aspect-ratio:1.65;transition:opacity .2s}
+.way-photo-link:hover .service-photo{opacity:.88}
+.outdoor-crop img{object-position:50% 31%}
+.smile-crop img{object-position:50% 25%}
+.stage-crop img{object-position:50% 35%}
+.way h3{font-size:2rem}
+.offer-names{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.offer-names a{border:1px solid #625c54;border-radius:5px;padding:10px 13px;font-size:.75rem;min-height:44px;display:flex;align-items:center}
+.offer-names a:hover{border-color:#d18a7b;background:#231d1b}
+.service-card{padding:0;overflow:hidden;scroll-margin-top:124px}
+.service-card>.service-photo{width:100%;aspect-ratio:1.7;margin-bottom:24px;flex:none}
+.service-card>:not(.service-photo){margin-left:26px;margin-right:26px}
+.service-card>.service-top{width:calc(100% - 52px)}
+.service-card>h3{font-size:2.2rem}
+.service-card>.button{width:calc(100% - 52px)}
+.service-card>.booking-details{width:calc(100% - 52px);margin-bottom:22px}
+.service-card ul{margin-top:20px;margin-bottom:20px}
+.photo-heading{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.photo-heading>figure{min-width:0;margin:0}
+.photo-heading .service-photo{aspect-ratio:1.55}
+.photo-heading h1{font-size:clamp(3rem,5vw,4.4rem)}
+.process-photo{margin:0 0 26px}
+.process-photo .service-photo{aspect-ratio:1.25}
+.inquiry-person{display:flex;align-items:center;gap:14px;margin-bottom:24px;font-size:.9rem;font-weight:500}
+.inquiry-person .service-photo{width:56px;height:56px;border-radius:50%;flex:none}
+.inquiry-person small{display:block;font-size:.7rem;color:var(--muted);font-weight:400;margin-top:4px}
+.photo-preview-note a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1000px){.photo-heading{gap:30px}.photo-heading h1{font-size:3.2rem}}
+@media(max-width:650px){
+ .intro.wrap{display:flex;flex-direction:column;width:100%;min-height:0;isolation:auto;padding:0}
+ .intro-media{position:relative;inset:auto;z-index:auto;order:0;width:100%;min-height:0;aspect-ratio:1.65;align-self:auto;background:#d9d0bf;overflow:hidden}
+ .intro-media>.service-photo{position:static;width:100%;height:100%}
+ .intro-media::after{display:none}
+ .intro-media .hero-portrait img{object-position:50% 29%;opacity:1}
+ .intro-media figcaption{display:none}
+ .intro-copy{order:1;align-self:auto;padding:24px 20px 28px;position:static;width:100%}
+ .intro-copy>.eyebrow{display:none}
+ .intro h1{font-size:clamp(2.25rem,9.65vw,2.85rem);line-height:1.02;max-width:16ch;margin:0}
+ .intro-text{margin-top:14px;font-size:.87rem;line-height:1.5;max-width:38ch}
+ .intro .actions{margin-top:19px;gap:7px}
+ .intro .button{min-height:50px;justify-content:center;font-size:.85rem}
+ .intro .text-link{padding:9px 0;font-size:.78rem}
+ .intro .small-note{display:none}
+ .ways-grid{gap:32px}.way-photo-link{margin-bottom:18px}.way-photo-link .service-photo{aspect-ratio:1.7}
+ .way h3{font-size:1.9rem;margin-top:16px}
+ .offer-names{margin-top:16px;gap:8px}.offer-names a{font-size:.72rem;padding:9px 11px}
+ .service-card{padding:0;scroll-margin-top:98px}
+ .service-card>.service-photo{aspect-ratio:1.65;margin-bottom:22px}
+ .service-card>:not(.service-photo){margin-left:20px;margin-right:20px}
+ .service-card>.service-top,.service-card>.button,.service-card>.booking-details{width:calc(100% - 40px)}
+ .service-card>.service-top{margin-bottom:20px}
+ .service-card>h3{font-size:2rem}
+ .photo-heading{grid-template-columns:1fr;gap:24px}
+ .photo-heading h1{font-size:clamp(2.5rem,10.7vw,3.3rem)}
+ .photo-heading .service-photo{aspect-ratio:1.65}
+ .process-photo{margin-bottom:22px}.process-photo .service-photo{aspect-ratio:1.7}
+ .inquiry-person{margin-bottom:22px}.inquiry-person .service-photo{width:50px;height:50px}
+}
+@media(prefers-reduced-motion:reduce){.way-photo-link .service-photo{transition:none}}

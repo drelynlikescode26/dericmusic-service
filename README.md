@@ -24,6 +24,8 @@ To finish account reporting, connect the correct ID, verify a real event in the 
 
 ## Mobile and validation
 
-The homepage has a compact photo-backed mobile hero. Custom play/pause and seek controls enhance native audio; native controls remain if JavaScript is unavailable. One track plays at a time, with a direct audio link on playback errors.
+The homepage uses the owner's approved EPK portrait, with the photo above the heading on mobile. Service cards and selected supporting sections use two EPK portraits and existing performance photos. Responsive WebP renditions are in `assets/images/portraits`; `sources.json` records provenance. Original unselected EPK photos are not published. Headings and navigation use the approved capitalization, and upward link arrows are removed.
+
+Custom play/pause and seek controls enhance native audio; native controls remain if JavaScript is unavailable. One track plays at a time, with a direct audio link on playback errors.
 
 17 automated DOM/behavior checks cover navigation, local routes, form validation and budget choices, submission outcomes/duplicates, audio controls, and consent-gated conversions. Live Formspree acceptance and inbox receipt were verified. No payment was made. Rendered desktop/iPhone QA remains pending because local browser access was disabled. Real analytics-provider verification also remains pending.

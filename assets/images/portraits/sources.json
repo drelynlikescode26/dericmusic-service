@@ -1,0 +1,104 @@
+{
+  "source": "https://github.com/drelynlikescode26/epk",
+  "selected": [
+    {
+      "file": "assets/gallery/deric-gallery-4.jpg",
+      "use": "Hero and inquiry portrait"
+    },
+    {
+      "file": "assets/gallery/deric-gallery-1.jpg",
+      "use": "Writing services and process"
+    }
+  ],
+  "existing": [
+    "assets/images/hero-bg.jpg",
+    "assets/images/perf-bg.jpg"
+  ],
+  "processing": "Responsive WebP copies only. No generated people, facial retouching, or content changes.",
+  "renditions": [
+    {
+      "name": "smiling",
+      "width": 480,
+      "height": 720,
+      "file": "assets/images/portraits/smiling-480.webp",
+      "bytes": 12336
+    },
+    {
+      "name": "smiling",
+      "width": 900,
+      "height": 1350,
+      "file": "assets/images/portraits/smiling-900.webp",
+      "bytes": 40500
+    },
+    {
+      "name": "smiling",
+      "width": 1400,
+      "height": 2100,
+      "file": "assets/images/portraits/smiling-1400.webp",
+      "bytes": 95418
+    },
+    {
+      "name": "outdoor",
+      "width": 480,
+      "height": 719,
+      "file": "assets/images/portraits/outdoor-480.webp",
+      "bytes": 33522
+    },
+    {
+      "name": "outdoor",
+      "width": 900,
+      "height": 1348,
+      "file": "assets/images/portraits/outdoor-900.webp",
+      "bytes": 112164
+    },
+    {
+      "name": "outdoor",
+      "width": 1400,
+      "height": 2096,
+      "file": "assets/images/portraits/outdoor-1400.webp",
+      "bytes": 235198
+    },
+    {
+      "name": "performance",
+      "width": 480,
+      "height": 270,
+      "file": "assets/images/portraits/performance-480.webp",
+      "bytes": 13526
+    },
+    {
+      "name": "performance",
+      "width": 900,
+      "height": 506,
+      "file": "assets/images/portraits/performance-900.webp",
+      "bytes": 34808
+    },
+    {
+      "name": "performance",
+      "width": 1400,
+      "height": 788,
+      "file": "assets/images/portraits/performance-1400.webp",
+      "bytes": 67832
+    },
+    {
+      "name": "monochrome",
+      "width": 480,
+      "height": 270,
+      "file": "assets/images/portraits/monochrome-480.webp",
+      "bytes": 10074
+    },
+    {
+      "name": "monochrome",
+      "width": 900,
+      "height": 506,
+      "file": "assets/images/portraits/monochrome-900.webp",
+      "bytes": 23248
+    },
+    {
+      "name": "monochrome",
+      "width": 1400,
+      "height": 788,
+      "file": "assets/images/portraits/monochrome-1400.webp",
+      "bytes": 40614
+    }
+  ]
+}
